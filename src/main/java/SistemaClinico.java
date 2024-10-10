@@ -4,6 +4,7 @@ import Exceptions.ProntuarioNaoEncontradoException;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.logging.Level;
 
 public interface SistemaClinico {
     public void registrarExame(Date dataAgendamento, String descricao, String id, Medico medico, Paciente paciente, TipoExame tipo);
