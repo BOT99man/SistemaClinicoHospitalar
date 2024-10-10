@@ -12,7 +12,7 @@ public interface SistemaClinico {
     public Exame consultarExame(String id)throws ExameNaoEncontradoException;
     public boolean atualizarExame(Exame exame)throws ExameNaoEncontradoException;
     public boolean atualizarProntuario(Prontuario prontuario)throws ProntuarioNaoEncontradoException;
-    public boolean removerExame(Exame exame) throws ExameNaoEncontradoException;
+    public boolean removerExame(Exame exame) throws ExameNaoEncontradoExceptio;
     public void salvarDados() throws IOException;
     public void recuperarDados() throws IOException;
 }
