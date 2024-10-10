@@ -1,28 +1,28 @@
 public class Medico {
     private String nome;
-    private String CRM;
-    private int ID;
+    private String crm;
+    private int id;
 
-    public Medico(String CRM, int ID, String nome) {
-        this.CRM = CRM;
-        this.ID = ID;
+    public Medico(String crm, int id, String nome) {
+        this.crm = crm;
+        this.id = id;
         this.nome = nome;
     }
 
-    public String getCRM() {
-        return CRM;
+    public String getCrm() {
+        return crm;
     }
 
-    public void setCRM(String CRM) {
-        this.CRM = CRM;
+    public void setCrm(String crm) {
+        this.crm = crm;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

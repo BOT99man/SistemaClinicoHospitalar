@@ -36,23 +36,5 @@ public class Paciente {
         this.cpf = cpf;
     }
 
-    @Override
-    public String toString() {
-        return "Paciente:\n" +
-                "nome : '" + nome + '\n' +
-                "nascimento : " + nascimento +
-                "\ncpf : '" + cpf + '\n';
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Paciente paciente)) return false;
-        return Objects.equals(getNome(), paciente.getNome()) && Objects.equals(getNascimento(), paciente.getNascimento()) && Objects.equals(getCpf(), paciente.getCpf());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNome(), getNascimento(), getCpf());
-    }
 }
