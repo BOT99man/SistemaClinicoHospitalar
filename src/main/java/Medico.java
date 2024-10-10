@@ -9,6 +9,10 @@ public class Medico {
         this.nome = nome;
     }
 
+    public Medico(){
+        this("", 0, "");
+    }
+
     public String getCRM() {
         return CRM;
     }

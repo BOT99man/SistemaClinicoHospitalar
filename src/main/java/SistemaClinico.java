@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public interface SistemaClinico {
-    public void agendarConsulta(Paciente paciente, Medico medico, String data);
+    public void agendarConsulta(Paciente paciente, Medico medico, String data, String id);
     public void registrarExame(Paciente paciente, TipoExame tipoExame, String resultado);
     public Consulta procurarConsulta(Paciente paciente);
     public Paciente pesquisarPaciente(String nomePaciente);

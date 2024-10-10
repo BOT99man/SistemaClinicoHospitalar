@@ -7,7 +7,7 @@ public class Exame {
     private Paciente paciente;
     private Medico medico;
     private Date dataAgendamento;
-    private boolean realizado;
+    private boolean realizado; // n precisa ja tem o tipo de exame
 
     public Exame(Date dataAgendamento, String descricao, String id, Medico medico, Paciente paciente, TipoExame tipo) {
         this.dataAgendamento = dataAgendamento;
