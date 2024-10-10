@@ -1,9 +1,10 @@
 import java.util.Map;
 
 public class SIstemaHospitalar implements SistemaClinico{
-    private Map<String,Consultas> consultas;
-    private Map<String,Exames> exames ;
-    private Map<String,Integer> estoqueRemedios;
+    private Map<String,Consulta> consultas;
+    private Map<String,Exame> exames ;
+
+
 
     public void agendarConsulta(Paciente paciente, Medico medico, String data) {
 
