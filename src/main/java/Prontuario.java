@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Date;
 
-public class Prontuario {
+public class Prontuario implements Serializable {
     private Date dataRegistro;
     private Medico medico;
     private Paciente paciente;

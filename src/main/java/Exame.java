@@ -15,8 +15,8 @@ public class Exame {
         this.id = id;
         this.medico = medico;
         this.paciente = paciente;
-        this.realizado = false; //inicia como não realizado
-        this.tipo = tipo;
+        this.realizado = false;
+        this.tipo = tipo; //inicia como não realizado
     }
 
     public Date getDataAgendamento() {
