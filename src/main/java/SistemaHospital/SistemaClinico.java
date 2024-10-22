@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface SistemaClinico {
+    public void adicionarPaciente(Paciente paciente)throws PacienteJaExisteException;
     public void registrarExame(Date dataAgendamento, String descricao, String id, Medico medico, Paciente paciente, TipoExame tipo); //ok
     public Prontuario procurarProntuario(Paciente paciente) throws ProntuarioNaoEncontradoException; //fazendo
     public Paciente pesquisarPaciente(String nomePaciente) throws PacienteNaoEncontradoException; //ok
@@ -17,9 +18,6 @@ public interface SistemaClinico {
     public boolean removerExame(String id) throws ExameNaoEncontradoException; // fazendo
     public List<Paciente> listarPacientesComExames(); //ok
     public void mostrarPacientes(); // ok
-
-    //TODO: cadastrar paciente
-
     public void salvarDados() throws IOException;
     public void recuperarDados() throws IOException;
 }

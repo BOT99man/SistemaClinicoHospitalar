@@ -13,12 +13,26 @@ public class Medico implements Serializable {
         this.nome = nome;
     }
 
+    public Medico(String medicoNome, String crm) {
+        this.nome = medicoNome;
+        this.crm = crm;
+    }
+
     public String getCrm() {
         return crm;
     }
 
     public void setCrm(String crm) {
         this.crm = crm;
+    }
+
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "crm='" + crm + '\'' +
+                ", nome='" + nome + '\'' +
+                ", id=" + id +
+                '}';
     }
 
     public int getId() {

@@ -1,5 +1,7 @@
 package SistemaHospital;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Exame {
@@ -10,6 +12,17 @@ public class Exame {
     private Medico medico;
     private Date dataAgendamento;
     private boolean realizado;
+    SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+
+    public Exame(String dataAgendamento, String descricao, String id, Medico medico, Paciente paciente, TipoExame tipo) throws ParseException {
+        this.dataAgendamento = sdf1.parse(dataAgendamento);
+        this.descricao = descricao;
+        this.id = id;
+        this.medico = medico;
+        this.paciente = paciente;
+        this.realizado = false;
+        this.tipo = tipo; //inicia como não realizado
+    }
 
     public Exame(Date dataAgendamento, String descricao, String id, Medico medico, Paciente paciente, TipoExame tipo) {
         this.dataAgendamento = dataAgendamento;

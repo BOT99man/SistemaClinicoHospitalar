@@ -1,6 +1,8 @@
 package SistemaHospital;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -8,11 +10,26 @@ public class Paciente implements Serializable {
     private String nome;
     private Date nascimento;
     private String cpf;
+    SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
 
-    public Paciente(String nome, Date nascimento, String cpf){
+
+    public Paciente(String nome, String nascimento, String cpf) throws ParseException {
         this.nome = nome;
-        this.nascimento = nascimento;
+        this.nascimento = sdf1.parse(nascimento);
         this.cpf = cpf;
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", nascimento=" + nascimento +
+                '}';
+    }
+
+    public Paciente(String nomePaciente) {
+        this.nome = nomePaciente;
     }
 
     public String getNome() {
@@ -38,12 +55,18 @@ public class Paciente implements Serializable {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Paciente paciente = (Paciente) o;
+        return Objects.equals(cpf, paciente.cpf); // Considerando que CPF é único
+    }
 
     @Override
-    public String toString() {
-        return "Paciente:" +
-                "\nnome: " + nome +
-                "\nnascimento=" + nascimento +
-                "\ncpf='" + cpf + '\n' ;
+    public int hashCode() {
+        return Objects.hash(cpf); // Baseado no CPF, pois é único para cada paciente
     }
 }
+
+
+

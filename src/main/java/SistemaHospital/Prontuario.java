@@ -47,4 +47,14 @@ public class Prontuario implements Serializable {
     public void setTratamento(String tratamento) {
         this.tratamento = tratamento;
     }
+
+    @Override
+    public String toString() {
+        return "Prontuario{" +
+                "dataRegistro=" + dataRegistro +
+                ", medico=" + medico +
+                ", paciente=" + paciente +
+                ", tratamento='" + tratamento + '\'' +
+                '}';
+    }
 }
