@@ -1,4 +1,4 @@
-package SistemaHospital;
+package Exceptions;
 
 public class PacienteJaExisteException extends Exception {
     public PacienteJaExisteException() {
