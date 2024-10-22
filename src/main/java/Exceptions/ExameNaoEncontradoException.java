@@ -2,7 +2,7 @@ package Exceptions;
 
 public class ExameNaoEncontradoException extends Exception {
     public ExameNaoEncontradoException() {
-        super("Exame não encontrado!");
+        super("SistemaHospital.Exame não encontrado!");
     }
 
     public ExameNaoEncontradoException(String msg) {

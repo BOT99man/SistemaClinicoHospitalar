@@ -1,3 +1,5 @@
+package SistemaHospital;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -37,5 +39,11 @@ public class Paciente implements Serializable {
         this.cpf = cpf;
     }
 
-
+    @Override
+    public String toString() {
+        return "Paciente:" +
+                "\nnome: " + nome +
+                "\nnascimento=" + nascimento +
+                "\ncpf='" + cpf + '\n' ;
+    }
 }

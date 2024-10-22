@@ -1,3 +1,5 @@
+package SistemaHospital;
+
 import java.io.Serializable;
 import java.util.Date;
 
