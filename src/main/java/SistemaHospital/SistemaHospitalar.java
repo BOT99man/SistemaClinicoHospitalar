@@ -1,3 +1,4 @@
+package SistemaHospital;
 
 import Exceptions.*;
 
@@ -12,6 +13,14 @@ public class SistemaHospitalar implements SistemaClinico {
     private Map<String, Prontuario> prontuarios;
     private Map<String, Exame> exames;
     private Map<String, Paciente> pacientes;
+
+    public Map<String, Paciente> getPacientes() {
+        return this.pacientes;
+    }
+
+    public Map<String, Exame> getExames() {
+        return exames;
+    }
 
     public SistemaHospitalar() {
         this.prontuarios = new HashMap<String, Prontuario>();

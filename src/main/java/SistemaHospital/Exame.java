@@ -1,3 +1,5 @@
+package SistemaHospital;
+
 import java.util.Date;
 
 public class Exame {
